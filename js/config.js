@@ -14,7 +14,7 @@ window.portfolioData = {
   social: {
     github: "https://github.com/JulianValenciaRv0",
     linkedin: "LINKEDIN_URL_AQUI",
-    cv: "CV_URL_AQUI"
+    cv: "https://drive.google.com/file/d/1DRmnttvz6MMHxbN2pT9jZFWLtcc3cG-d/view?usp=sharing"
   },
   skills: [
     { title: "Manejo / conocimientos", items: ["HTML", "CSS", "JavaScript", "Python", "Git", "Git Flow", "Linux", "MySQL", "SQL", "JSON", "JSON Server", "APIs", "DOM", "LocalStorage", "Scrum", "UX/UI", "Prompt Engineering / IA", "Bases de datos"] },
