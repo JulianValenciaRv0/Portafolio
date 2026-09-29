@@ -57,13 +57,14 @@ data.projects.forEach((project, index) => {
   visualMark.textContent = ["JS", "NX", "BH"][index] || "↗";
   visual.append(visualIndex, visualTitle, visualMark);
   if (project.image) {
+    visual.removeAttribute("aria-hidden");
     const image = document.createElement("img");
     image.src = project.image;
     image.alt = project.imageAlt || `Captura de ${project.name}`;
     image.loading = "lazy";
     image.decoding = "async";
     visual.prepend(image);
-  }
+  } else visual.setAttribute("aria-hidden", "true");
   const content = document.createElement("div");
   content.className = "project-content";
   const top = document.createElement("div");
