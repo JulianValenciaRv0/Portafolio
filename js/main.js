@@ -22,7 +22,11 @@ data.skills.forEach((group, index) => {
   const article = document.createElement("article");
   article.className = "skill-group";
   const heading = document.createElement("h3");
-  heading.innerHTML = `<span>0${index + 1}</span>${group.title}`;
+  const number = document.createElement("span");
+  number.textContent = `0${index + 1}`;
+  const title = document.createElement("span");
+  title.textContent = group.title;
+  heading.append(number, title);
   const list = document.createElement("ul");
   list.className = "tag-list";
   group.items.forEach((item) => {
@@ -42,7 +46,24 @@ data.projects.forEach((project, index) => {
   const visual = document.createElement("div");
   visual.className = `project-visual visual-${index + 1}`;
   visual.setAttribute("aria-hidden", "true");
-  visual.innerHTML = `<span class="visual-index">0${index + 1}</span><span class="visual-title">${project.name}</span><span class="visual-mark">${["JS", "NX", "BH"][index] || "↗"}</span>`;
+  const visualIndex = document.createElement("span");
+  visualIndex.className = "visual-index";
+  visualIndex.textContent = `0${index + 1}`;
+  const visualTitle = document.createElement("span");
+  visualTitle.className = "visual-title";
+  visualTitle.textContent = project.name;
+  const visualMark = document.createElement("span");
+  visualMark.className = "visual-mark";
+  visualMark.textContent = ["JS", "NX", "BH"][index] || "↗";
+  visual.append(visualIndex, visualTitle, visualMark);
+  if (project.image) {
+    const image = document.createElement("img");
+    image.src = project.image;
+    image.alt = project.imageAlt || `Captura de ${project.name}`;
+    image.loading = "lazy";
+    image.decoding = "async";
+    visual.prepend(image);
+  }
   const content = document.createElement("div");
   content.className = "project-content";
   const top = document.createElement("div");
@@ -70,7 +91,7 @@ data.projects.forEach((project, index) => {
     anchor.href = href;
     anchor.target = "_blank";
     anchor.rel = "noreferrer";
-    anchor.innerHTML = `${label} <span aria-hidden="true">↗</span>`;
+    anchor.textContent = `${label} ↗`;
     links.append(anchor);
   });
   content.append(top, description, techs, links);

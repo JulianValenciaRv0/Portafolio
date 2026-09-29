@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
   --color-background: #101310;
   --color-surface: #171b17;
@@ -9,8 +7,8 @@
   --color-text: #f0f2e9;
   --color-text-muted: #9a9f91;
   --color-border: #30372e;
-  --font-body: 'Manrope', 'Segoe UI', sans-serif;
-  --font-mono: 'DM Mono', Consolas, monospace;
+  --font-body: 'Segoe UI', 'Aptos', sans-serif;
+  --font-mono: 'Cascadia Mono', Consolas, monospace;
   --container: 1160px;
   color-scheme: dark;
   scroll-behavior: smooth;
@@ -73,3 +71,5 @@ h2 { margin-bottom: 0; font-size: clamp(2rem, 4vw, 3.6rem); font-weight: 600; li
 @media (max-width: 850px) { .header-inner { gap: 18px; }.primary-nav { gap: 15px; }.header-cta { display: none; }.hero-grid { gap: 42px; }.hero-card { min-height: 310px; }.monogram { width: 170px; height: 170px; font-size: 6.5rem; }.project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.project-card:last-child { grid-column: 1 / -1; }.project-card:last-child .project-visual { min-height: 155px; }.skill-group { padding: 20px; } }
 @media (max-width: 640px) { .container { width: min(var(--container), calc(100% - 36px)); }.header-inner { min-height: 66px; justify-content: space-between; }.brand { font-size: .78rem; }.brand-mark { width: 31px; height: 31px; }.menu-toggle { width: 42px; height: 42px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; border: 1px solid var(--color-border); background: transparent; color: var(--color-text); }.menu-toggle span { width: 17px; height: 1px; background: currentColor; transition: transform .18s; }.menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }.menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }.primary-nav { position: absolute; top: 65px; left: 0; right: 0; display: none; align-items: stretch; gap: 0; padding: 8px 18px 16px; border-bottom: 1px solid var(--color-border); background: var(--color-background); }.primary-nav.is-open { display: flex; flex-direction: column; }.primary-nav a { padding: 12px 4px; border-bottom: 1px solid rgb(255 255 255 / 6%); }.hero { min-height: 0; padding-top: 72px; }.hero-grid { grid-template-columns: 1fr; gap: 42px; }.hero::before { inset-inline: 0; height: 540px; }.hero h1 { font-size: clamp(2.6rem, 13vw, 4.2rem); }.hero-card { min-height: 280px; }.monogram { width: 150px; height: 150px; font-size: 5.8rem; }.hero-meta { margin-top: 30px; font-size: .56rem; }.two-column, .contact-layout { grid-template-columns: 1fr; gap: 22px; }.section-body { padding-top: 8px; }.heading-row { align-items: start; flex-direction: column; margin-bottom: 30px; }.heading-aside { max-width: 360px; }.skill-columns { grid-template-columns: 1fr; }.skill-group + .skill-group { border-left: 0; border-top: 1px solid var(--color-border); }.project-grid { grid-template-columns: 1fr; }.project-card:last-child { grid-column: auto; }.project-card:last-child .project-visual { min-height: 180px; }.feature-section { padding-top: 0; }.feature-card { grid-template-columns: 1fr; gap: 22px; }.feature-copy { padding-right: 0; }.education-item { grid-template-columns: 30px 1fr; gap: 10px; }.education-status { grid-column: 2; text-align: left; }.contact-layout { gap: 30px; }.contact-links a { grid-template-columns: 75px minmax(0, 1fr) 18px; }.footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 22px; gap: 10px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+.footer-links { display: flex; gap: 15px; }.footer-links a { color: var(--color-text-muted); font-size: .67rem; text-decoration: none; }.footer-links a:hover { color: var(--color-primary); }
+.project-visual img { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; }
